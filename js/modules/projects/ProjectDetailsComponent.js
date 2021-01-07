@@ -4,6 +4,7 @@ export default {
     // what project was clicked. all of this data is grabbed specifically based on the id of the project clicked
     template: `
     <div>
+    <meta name="robots" content="noindex, nofollow">
     <section v-if="this.$route.params.name" id="project">
         <h1>[ {{ this.$route.params.name }} ]</h1>
         <div class="projectTop">
@@ -22,18 +23,18 @@ export default {
             </div>
         </div>
         <div class="projectIntro">
-            <img :src="'images/' + this.$route.params.introImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.introImg + '.png'">
             <h2>{{ this.$route.params.introTitle }}</h2>
             <p>{{ this.$route.params.introPara }}</p>
         </div>
         <div class="projectMiddle">
-            <img :src="'images/' + this.$route.params.middleImg + '.jpg'">
+            <img :src="'images/' + this.$route.params.middleImg + '.png'">
             <h2>{{ this.$route.params.middleTitle }}</h2>
             <p>{{ this.$route.params.middlePara1 }}</p>
         </div>
         <div class="projectOutro">
-            <img :src="'images/' + this.$route.params.closingImg + '.jpg'">
-            <h2>{{ this.$route.params.middleTitle }}</h2>
+            <img :src="'images/' + this.$route.params.closingImg + '.png'">
+            <h2>{{ this.$route.params.closingTitle }}</h2>
             <p>{{ this.$route.params.closingPara1 }}</p>
         </div>
         <router-link class="projBackBtn" v-on:click.native="scrollToWork()" :to="{ path: '../' }">back</router-link>
